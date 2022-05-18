@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,9 +10,9 @@
     <title>Web Accessibility Demo | Inaccessible Example</title>
   </head>
   <body>
-    <section class="has-background-light">
+    <div class="has-background-light">
       <div class="container">
-        <nav class="navbar is-light is-spaced">
+        <div class="navbar is-light is-spaced">
           <div class="navbar-menu is-active">
             <div class="navbar-start">
               <a href="/" class="navbar-item"> Start </a>
@@ -24,19 +24,16 @@
               </a>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </section>
-    <main class="section">
-      <article class="container is-max-desktop">
+    </div>
+    <div class="section has-text-grey">
+      <div class="container is-max-desktop">
         <p>Jane Doe · 7min read</p>
-        <h1 class="title is-1">How to train your dog</h1>
-        <figure class="image block">
-          <img
-            src="images/dog-with-ball.jpg"
-            alt="A golden retriever with a tennis ball in its mouth."
-          />
-        </figure>
+        <h2 class="title is-1 has-text-grey-dark">How to train your dog</h2>
+        <div class="image block">
+          <img src="images/dog-with-ball.jpg" alt="dog-with-ball.jpg" />
+        </div>
         <p class="block">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget felis
@@ -53,7 +50,7 @@
           adipiscing. Id aliquet lectus proin nibh nisl condimentum id venenatis
           a. Nunc sed velit dignissim sodales.
         </p>
-        <h2 class="title is-3">The Basic Commands</h2>
+        <p class="title is-3 has-text-grey-dark">The Basic Commands</p>
         <p class="block">
           Sit amet venenatis urna cursus eget. Aliquet eget sit amet tellus cras
           adipiscing enim. Sed libero enim sed faucibus turpis in eu mi.
@@ -65,14 +62,14 @@
           mattis. Lacinia quis vel eros donec ac odio tempor. Sapien
           pellentesque habitant morbi tristique senectus et netus.
         </p>
-        <h3 class="title is-4">"Sit" And "Down"</h3>
+        <p class="title is-4 has-text-grey-dark">"Sit" And "Down"</p>
         <p class="block">
           Sed libero enim sed faucibus turpis in eu mi. At consectetur lorem
           donec massa sapien faucibus. Imperdiet nulla malesuada pellentesque
           elit eget gravida cum. Nulla at volutpat diam ut venenatis tellus in.
           Pellentesque elit eget gravida cum sociis natoque penatibus et magnis.
         </p>
-        <h3 class="title is-4">"Stay" And "Come"</h3>
+        <p class="title is-4 has-text-grey-dark">"Stay" And "Come"</p>
         <p class="block">
           A cras semper auctor neque vitae tempus quam pellentesque.
           Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Sed
@@ -95,7 +92,7 @@
           Posuere sollicitudin aliquam ultrices sagittis. Sapien nec sagittis
           aliquam malesuada bibendum arcu.
         </p>
-        <h2 class="title is-3">Using Treats Effectively</h2>
+        <p class="title is-3 has-text-grey-dark">Using Treats Effectively</p>
 
         <p class="block">
           Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Eget nunc
@@ -111,7 +108,7 @@
           orci porta non pulvinar. Vitae congue mauris rhoncus aenean vel elit
           scelerisque. Pharetra vel turpis nunc eget lorem dolor.
         </p>
-        <h2 class="title is-3">Final Remarks</h2>
+        <p class="title is-3 has-text-grey-dark">Final Remarks</p>
 
         <p class="block">
           Vitae turpis massa sed elementum tempus egestas. Vulputate odio ut
@@ -123,36 +120,42 @@
           egestas. Commodo elit at imperdiet dui accumsan sit. Porttitor eget
           dolor morbi non arcu risus. Scelerisque viverra mauris in aliquam.
         </p>
-      </article>
-    </main>
-    <aside class="section">
+      </div>
+    </div>
+    <div class="section has-text-grey">
       <div class="container is-max-desktop">
         <hr />
-        <h2 class="title is-2">Comments</h2>
+        <p class="title is-2 has-text-grey-dark">Comments</p>
         <p class="block">Leave your comment here.</p>
         <form>
           <div class="field">
-            <label for="name" class="label">Name</label>
+            <label class="label">Name</label>
             <div class="control">
               <input id="name" name="name" type="text" class="input" />
             </div>
           </div>
           <div class="field">
-            <label for="email" class="label">E-Mail</label>
+            <label class="label">E-Mail</label>
             <div class="control">
               <input id="email" name="email" type="email" class="input" />
             </div>
           </div>
 
           <div class="field">
-            <label for="message" class="label">Message</label>
+            <label class="label">Message</label>
             <div class="control">
               <textarea id="message" name="message" class="textarea"></textarea>
             </div>
           </div>
-          <input type="submit" value="Post comment" class="button" />
+          <div
+            id="submitComment"
+            class="button is-medium"
+            onclick="console.log('submitting comment...')"
+          >
+            Post comment
+          </div>
         </form>
       </div>
-    </aside>
+    </div>
   </body>
 </html>
