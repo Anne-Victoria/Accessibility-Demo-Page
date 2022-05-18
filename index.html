@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="./main.css" />
     <title>Web Accessibility Demo</title>
   </head>
   <body>
-    <section class="section">
+    <section class="has-background-light">
       <div class="container">
+        <nav class="navbar is-light is-spaced">
+          <div class="navbar-menu is-active">
+            <div class="navbar-start">
+              <a href="/" class="navbar-item"> Start </a>
+              <a href="./accessible.html" class="navbar-item">
+                Accessible Version
+              </a>
+              <a href="./inaccessible.html" class="navbar-item">
+                Inaccessible Version
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <main class="section">
+      <div class="container is-max-desktop">
         <h1 class="title is-1">Web Accessibility Demo</h1>
         <p class="block">
           This page demonstrates how a similar page can be implemented in a
@@ -17,15 +35,22 @@
           inaccessible and a more accessible version of the same page.
         </p>
         <h2 class="title is-2">Versions</h2>
-        <ul>
+        <ul class="block">
           <li>
-            <a href="/src/inaccessible.html">The inaccessible version</a>
+            <a href="./accessible.html">The more accessible version</a>
           </li>
           <li>
-            <a href="/src/accessible.html">The more accessible version</a>
+            <a href="./inaccessible.html">The inaccessible version</a>
           </li>
         </ul>
+        <h2 class="title is-2">GitHub</h2>
+        <p class="block">
+          Find the code on
+          <a href="https://github.com/Anne-Victoria/Accessibility-Demo-Page"
+            >GitHub</a
+          >.
+        </p>
       </div>
-    </section>
+    </main>
   </body>
 </html>

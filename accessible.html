@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css" />
     <link rel="stylesheet" href="./main.css" />
     <title>Web Accessibility Demo | More accessible Example</title>
   </head>
   <body>
+    <section class="has-background-light">
+      <div class="container">
+        <nav class="navbar is-light is-spaced">
+          <div class="navbar-menu is-active">
+            <div class="navbar-start">
+              <a href="/" class="navbar-item"> Start </a>
+              <a href="./accessible.html" class="navbar-item is-active">
+                Accessible Version
+              </a>
+              <a href="./inaccessible.html" class="navbar-item">
+                Inaccessible Version
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
     <main class="section">
-      <div class="container is-max-desktop">
-        <p>Jane Doe · 9min read</p>
+      <article class="container is-max-desktop">
+        <p>Jane Doe · 7min read</p>
         <h1 class="title is-1">How to train your dog</h1>
         <figure class="image block">
           <img
@@ -105,7 +122,36 @@
           egestas. Commodo elit at imperdiet dui accumsan sit. Porttitor eget
           dolor morbi non arcu risus. Scelerisque viverra mauris in aliquam.
         </p>
-      </div>
+      </article>
     </main>
+    <aside class="section">
+      <div class="container is-max-desktop">
+        <hr />
+        <h2 class="title is-2">Comments</h2>
+        <p class="block">Leave your comment here.</p>
+        <form>
+          <div class="field">
+            <label for="name" class="label">Name</label>
+            <div class="control">
+              <input id="name" name="name" type="text" class="input" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email" class="label">E-Mail</label>
+            <div class="control">
+              <input id="email" name="email" type="email" class="input" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message" class="label">Message</label>
+            <div class="control">
+              <textarea id="message" name="message" class="textarea"></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Post comment" class="button" />
+        </form>
+      </div>
+    </aside>
   </body>
 </html>
