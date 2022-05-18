@@ -2,6 +2,10 @@
 
 This page demontrates how the same page can be implemented in a more accessible or less accessible way.
 
+## View the demo
+
+This site is deployed at [accessibility-demo-page.netlify.app](https://accessibility-demo-page.netlify.app).
+
 ## Setup
 
 This is for demo purposes only so the setup is not optimized for production.
